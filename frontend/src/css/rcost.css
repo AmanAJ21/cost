@@ -1,0 +1,127 @@
+/* Container Styles */
+.container {
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin: 20px auto; /* Center the container */
+}
+
+/* Form Layout */
+#form-container {
+    display: flex;
+    justify-content: center; /* Center the forms */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin: 10px 0;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    font-weight: bold;
+    color: #fff; /* Improved label color for better visibility */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    transition: border-color 0.3s, background 0.3s; /* Smooth transition */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #28a745;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    margin-top: 20px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    flex: 1; /* Allow buttons to grow equally */
+    margin: 0 5px; /* Add margin between buttons */
+    font-size: 16px; /* Increase font size for better readability */
+    font-weight: bold; /* Make button text bold */
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+input[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+input[type="reset"]:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Result Display */
+.cost-result {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(233, 236, 239, 0.8);
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold; /* Make result text bold */
+}
+
+/* Loading Indicator */
+.loading {
+    display: none;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .form-group {
+        flex: 1 1 100%; /* Full width on small screens */
+        margin: 0 0 10px; /* Margin at the bottom */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons on small screens */
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        margin: 5px 0; /* Margin between stacked buttons */
+    }
+}

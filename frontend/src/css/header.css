@@ -1,0 +1,56 @@
+.header {
+    width: 99vw;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 25px 40px; /* Padding around the header, more horizontal padding */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between title and nav */
+    align-items: center; /* Center items vertically */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.header-title {
+    font-size: 24px; /* Larger font size for the title */
+    font-weight: bold; /* Bold text */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+}
+
+.header-nav ul {
+    margin: 0 50px;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+
+.header-nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    padding: 5px 10px; /* Add padding for clickable area */
+    border-radius: 4px; /* Rounded corners for links */
+}
+
+.header-nav a:hover {
+    color: #FFD700; /* Change color on hover */
+    background-color: rgba(255, 215, 0, 0.2); /* Light background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .header-nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        width: 100%; /* Full width for nav */
+    }
+
+    .header-nav li {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px; /* Add top margin for spacing */
+    }
+}
